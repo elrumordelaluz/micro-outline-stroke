@@ -1,0 +1,15 @@
+{
+  "name": "micro-outline-stroke",
+  "version": "1.0.0",
+  "description": "Microservice for svg-outline-stroke",
+  "main": "index.js",
+  "repository": "https://github.com/elrumordelaluz/micro-outline-stroke",
+  "author": "Lionel T <elrumordelaluz@hotmail.com> (https://elrumordelaluz.com/)",
+  "license": "MIT",
+  "dependencies": {
+    "micro": "9.0.2"
+  },
+  "devDependencies": {
+    "micro-dev": "1.4.0"
+  }
+}
