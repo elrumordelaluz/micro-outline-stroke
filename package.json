@@ -7,9 +7,15 @@
   "author": "Lionel T <elrumordelaluz@hotmail.com> (https://elrumordelaluz.com/)",
   "license": "MIT",
   "dependencies": {
-    "micro": "9.0.2"
+    "micro": "9.0.2",
+    "svg-outline-stroke": "1.0.0",
+    "urlencoded-body-parser": "2.0.1"
   },
   "devDependencies": {
     "micro-dev": "1.4.0"
+  },
+  "scripts": {
+    "start": "micro",
+    "dev": "micro-dev"
   }
 }
