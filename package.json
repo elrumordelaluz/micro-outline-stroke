@@ -8,7 +8,8 @@
   "license": "MIT",
   "dependencies": {
     "micro": "9.0.2",
-    "svg-outline-stroke": "1.0.0",
+    "micro-cors": "0.0.4",
+    "svg-outline-stroke": "1.1.0",
     "urlencoded-body-parser": "2.0.1"
   },
   "devDependencies": {
@@ -16,6 +17,6 @@
   },
   "scripts": {
     "start": "micro",
-    "dev": "micro-dev"
+    "dev": "micro-dev --ignore=**/app/**"
   }
 }
