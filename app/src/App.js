@@ -13,7 +13,7 @@ class App extends Component {
       axios({
         url: 'http://localhost:3000',
         method: 'post',
-        data: qs.stringify({ input: target.result, width: 1000, height: 1000 }),
+        data: qs.stringify({ input: target.result }),
       })
         .then(res => console.log(res.data))
         .catch(e => console.log(e))
