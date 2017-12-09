@@ -6,7 +6,6 @@ const parse = require('urlencoded-body-parser')
 const handler = async (req, res) => {
   const { input } = await parse(req)
   if (input) {
-    console.log(input);
     try {
       return await outlineStroke(input)
     } catch (err) {
