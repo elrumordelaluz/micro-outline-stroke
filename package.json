@@ -4,7 +4,8 @@
   "description": "Microservice for svg-outline-stroke",
   "main": "index.js",
   "repository": "https://github.com/elrumordelaluz/micro-outline-stroke",
-  "author": "Lionel T <elrumordelaluz@hotmail.com> (https://elrumordelaluz.com/)",
+  "author":
+    "Lionel T <elrumordelaluz@hotmail.com> (https://elrumordelaluz.com/)",
   "license": "MIT",
   "dependencies": {
     "micro": "9.0.2",
@@ -20,6 +21,7 @@
     "dev": "micro-dev --ignore=**/app/**"
   },
   "now": {
-    "alias": "https://micro-outline-stroke.now.sh/"
+    "alias": "https://micro-outline-stroke.now.sh/",
+    "files": ["index.js"]
   }
 }
