@@ -18,5 +18,8 @@
   "scripts": {
     "start": "micro",
     "dev": "micro-dev --ignore=**/app/**"
+  },
+  "now": {
+    "alias": "https://micro-outline-stroke.now.sh/"
   }
 }
