@@ -9,7 +9,7 @@
   "dependencies": {
     "micro": "9.0.2",
     "micro-cors": "0.0.4",
-    "svg-outline-stroke": "1.1.0",
+    "svg-outline-stroke": "1.1.1",
     "urlencoded-body-parser": "2.0.1"
   },
   "devDependencies": {

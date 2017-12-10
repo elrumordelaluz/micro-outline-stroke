@@ -1919,9 +1919,9 @@ supports-color@^4.0.0:
   dependencies:
     has-flag "^2.0.0"
 
-svg-outline-stroke@1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/svg-outline-stroke/-/svg-outline-stroke-1.1.0.tgz#ba805b140dddd784560d7d224afb57eb454dd710"
+svg-outline-stroke@1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/svg-outline-stroke/-/svg-outline-stroke-1.1.1.tgz#8ad58b129fcf202dd4d5b9ce0aaaeda679f83591"
   dependencies:
     potrace "2.1.1"
     sharp "0.18.4"
