@@ -12,6 +12,9 @@
     "svg-outline-stroke": "1.1.3",
     "urlencoded-body-parser": "2.0.1"
   },
+  "engines": {
+    "node": "8.9.3"
+  },
   "devDependencies": {
     "micro-dev": "2.1.0"
   },
