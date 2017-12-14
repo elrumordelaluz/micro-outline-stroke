@@ -73,3 +73,13 @@
 
 .close { right: 10px }
 .copy { right: 30px }
+
+.github_logo {
+  width: 25px;
+  height: 25px;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  z-index: 20;
+}

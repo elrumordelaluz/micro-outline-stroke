@@ -4,6 +4,7 @@ import axios from 'axios'
 import qs from 'qs'
 import './styles.css'
 import logo from './logo.svg'
+import githubLogo from './github.svg'
 import Clipboard from 'clipboard'
 
 const url = 'https://micro-outline-stroke.now.sh/'
@@ -40,7 +41,6 @@ class App extends Component {
 
   render() {
     const { output, loading, copied } = this.state
-    console.log(copied);
     return [
       <Dropzone
         key="dropzone"
@@ -63,6 +63,9 @@ class App extends Component {
         </button>
         <code id="foo">{output}</code>
       </pre>,
+      <a href="https://github.com/elrumordelaluz/micro-outline-stroke" className="github">
+        <img src={githubLogo} className="github_logo" alt="github logo" />
+      </a>
     ]
   }
 }
