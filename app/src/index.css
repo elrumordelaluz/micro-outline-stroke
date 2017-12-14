@@ -1,3 +1,8 @@
+:root {
+  --code-font: 'SFMono-Regular', 'Consolas', 'Liberation Mono', 'Menlo',
+    'Courier', monospace;
+}
+
 body {
   margin: 0;
   padding: 0;

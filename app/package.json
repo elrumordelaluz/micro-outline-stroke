@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "axios": "0.17.1",
+    "clipboard": "1.7.1",
     "gh-pages": "1.1.0",
     "qs": "6.5.1",
     "react": "^16.2.0",
