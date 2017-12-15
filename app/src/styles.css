@@ -25,12 +25,18 @@
 .message {
   position: absolute;
   text-align: center;
-  top: 30px;
+  top: 0;
   left: 50%;
-  transform: translateX(-50%);
   color: #414242;
   font-size: 0.85em;
   font-family: var(--code-font);
+  width: 70vw;
+  border: 0;
+  background: transparent;
+  height: 70px;
+  padding: 1em;
+  outline: 0;
+  transform: translateX(-50%);
 }
 
 .output {
@@ -62,17 +68,18 @@
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
 }
 
-.close,
-.copy {
+.controls {
+  display: flex;
   position: absolute;
   top: 10px;
+}
+
+.button {
   border: 0;
   background: none;
   cursor: pointer;
+  outline: 0;
 }
-
-.close { right: 10px }
-.copy { right: 30px }
 
 .github_logo {
   width: 25px;
@@ -82,4 +89,14 @@
   right: 10px;
   cursor: pointer;
   z-index: 20;
+}
+
+.error {
+  position: absolute;
+  top: 7px;
+  text-align: center;
+  font-size: 0.7em;
+  right: 0;
+  left: 0;
+  color: #e03756;
 }
