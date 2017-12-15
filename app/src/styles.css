@@ -40,30 +40,35 @@
 }
 
 .output {
-  color: #414242;
   height: 30vh;
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
   transform: translateY(100%);
-  tab-size: 4;
-  overflow-x: auto;
-  line-height: 1.5;
   font-family: var(--code-font);
   background-color: rgba(255, 255, 255, 0.9);
   transition: 0.3s;
   z-index: 10;
+  overflow: hidden;
+}
+
+.code {
+  height: 100%;
+  tab-size: 4;
+  overflow: auto;
+  line-height: 1.5;
+  color: #414242;
   margin: 0;
 }
 
-.output code {
+.code code {
   white-space: pre-wrap;
 }
 
 .show {
   transform: translateY(0);
-  padding: 30px 40px;
+  padding: 35px 30px 20px;
   border-top: 1px solid #f5f5f7;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
 }

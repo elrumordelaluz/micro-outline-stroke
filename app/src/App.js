@@ -7,7 +7,12 @@ import logo from './logo.svg'
 import githubLogo from './github.svg'
 import Clipboard from 'clipboard'
 
-const url = 'https://micro-outline-stroke.now.sh/'
+const url =
+  process.env.NODE_ENV === 'development'
+    ? 'http://localhost:3000'
+    : 'https://micro-outline-stroke.now.sh/'
+
+const initialFileName = 'svg'
 
 class App extends Component {
   state = { output: null, loading: false, copied: false, error: false }
@@ -18,12 +23,14 @@ class App extends Component {
       this.setState({ copied: true })
       e.clearSelection()
     })
+    this.outputName = initialFileName
   }
 
   onDrop = files => {
     this.resetOutput()
     const file = files[0]
     const reader = new FileReader()
+    this.outputName = file.name.replace('.svg', '')
     reader.readAsText(file, 'UTF-8')
     reader.onload = ({ target }) => {
       this.processInput(target.result)
@@ -32,7 +39,7 @@ class App extends Component {
 
   processInput = input => {
     this.setState({ loading: true, copied: false, error: false })
-    const data = qs.stringify({ input })
+    const data = qs.stringify({ input, color: 'inherit' })
     axios({
       url,
       method: 'post',
@@ -50,9 +57,10 @@ class App extends Component {
 
   inputChange = e => {
     const val = this.pasteInput.value.trim()
-
+    
     if (val.includes('</svg>')) {
       this.pasteInput.value = ''
+      this.outputName = initialFileName
       this.pasteInput.blur()
       this.processInput(val)
     }
@@ -69,7 +77,7 @@ class App extends Component {
       })
       const fileURL = URL.createObjectURL(file)
       element.href = fileURL
-      element.download = 'outlined-stroke.svg'
+      element.download = `${this.outputName}__outlined.svg`
       element.click()
       // window.open(fileURL)
       window.URL.revokeObjectURL(fileURL)
@@ -91,6 +99,7 @@ class App extends Component {
         rejectClassName="wrapper__reject">
         <input
           ref={input => (this.pasteInput = input)}
+          disabled={loading}
           className="message"
           placeholder="Drop the svg file or paste the code"
           onInput={this.inputChange}
@@ -102,22 +111,24 @@ class App extends Component {
         )}
         <img src={logo} className="logo" alt="logo" />
       </Dropzone>,
-      <pre
+      <div
         key="output"
         className={`output ${output && !loading ? 'show' : ''}`}>
-        <div className="controls">
-          <button className="button copyButton" data-clipboard-target="#foo">
-            {copied ? 'Copied' : 'Copy'}
-          </button>
-          <button className="button" onClick={this.download}>
-            Download
-          </button>
-          <button className="button" onClick={this.resetOutput}>
-            ✕
-          </button>
-        </div>
-        <code id="foo">{output}</code>
-      </pre>,
+        <pre className="code">
+          <div className="controls">
+            <button className="button copyButton" data-clipboard-target="#foo">
+              {copied ? 'Copied' : 'Copy'}
+            </button>
+            <button className="button" onClick={this.download}>
+              Download
+            </button>
+            <button className="button" onClick={this.resetOutput}>
+              ✕
+            </button>
+          </div>
+          <code id="foo">{output}</code>
+        </pre>
+      </div>,
       <a
         key="github"
         href="https://github.com/elrumordelaluz/micro-outline-stroke"
