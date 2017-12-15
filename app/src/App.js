@@ -54,18 +54,21 @@ class App extends Component {
         <p className="message">Drop the svg file here</p>
         <img src={logo} className="logo" alt="logo" />
       </Dropzone>,
-      <pre
-        key="output"
-        className={`output ${output ? 'show' : ''}`}>
-        <button className="copy" data-clipboard-target="#foo">{copied ? 'Copied' : 'Copy'}</button>
+      <pre key="output" className={`output ${output ? 'show' : ''}`}>
+        <button className="copy" data-clipboard-target="#foo">
+          {copied ? 'Copied' : 'Copy'}
+        </button>
         <button className="close" onClick={this.resetOutput}>
           ✕
         </button>
         <code id="foo">{output}</code>
       </pre>,
-      <a href="https://github.com/elrumordelaluz/micro-outline-stroke" className="github">
+      <a
+        key="github"
+        href="https://github.com/elrumordelaluz/micro-outline-stroke"
+        className="github">
         <img src={githubLogo} className="github_logo" alt="github logo" />
-      </a>
+      </a>,
     ]
   }
 }
