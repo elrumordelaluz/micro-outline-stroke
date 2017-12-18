@@ -13,6 +13,7 @@
 ## Params
 
 `input` <small>[ required ]</small> `svg` stroked code to convert in outlines
+`...rest?` <small>[ optionals ]</small> see [svg-outline-stroke params](https://github.com/elrumordelaluz/outline-stroke#params)
 
 ## Examples
 
