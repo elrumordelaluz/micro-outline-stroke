@@ -1,3 +1,14 @@
+:root {
+  --code-font: 'SFMono-Regular', 'Consolas', 'Liberation Mono', 'Menlo',
+    'Courier', monospace;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
 .wrapper {
   position: fixed !important;
   top: 0;
